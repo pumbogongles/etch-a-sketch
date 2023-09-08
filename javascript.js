@@ -1,11 +1,16 @@
 let gridContainer = document.querySelector('.container');
-gridContainer.style.gridTemplateColumns = 'repeat(16, lir)'
+let size = 8
+gridContainer.style.gridTemplateColumns = `repeat(auto-fill, 12.5%)`
 
-let gridSize = 16;
-
-for (let i = 0; i < gridSize; i++) {
-    for (j = 0; j < gridSize; j++) {
-        const cells = document.createElement('div');
-        cells.classList.add('cell')
+for (i = 0; i < 8; i ++) {
+    let square = document.createElement('div')
+    square.innerText = ("for loop (i)") //sample text. remove when done
+    gridContainer.appendChild(square).className = "grid-item";
+    for (j = 0; j < 7; j++) {
+        let square = document.createElement('div')
+        square.innerText = ("for loop (j)") //sample text. remove when done
+        gridContainer.appendChild(square).className = "grid-item";
     }
 }
+
+
