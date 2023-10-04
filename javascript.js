@@ -13,4 +13,10 @@ for (i = 0; i < 8; i ++) {
     }
 }
 
+const gridPattern = document.querySelectorAll('gridItem')
 
+gridPattern.forEach(mouseHover => {
+    mouseHover.addEventListener('hover', () => {
+        gridContainer.style.background = `red`
+    })
+})
